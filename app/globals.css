@@ -197,6 +197,24 @@ p {
   max-width: 760px;
 }
 
+.hero-identity {
+  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  justify-content: center;
+  margin: 0 auto 2rem;
+  max-width: 840px;
+}
+
+.hero-identity span {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  font-size: 0.88rem;
+  padding: 0.55rem 0.8rem;
+}
+
 .hero-btns {
   display: flex;
   flex-wrap: wrap;
@@ -239,6 +257,30 @@ section {
   padding: 7.5rem 0;
 }
 
+.rhythm-section {
+  padding-top: 0;
+}
+
+.statement {
+  padding: 5.5rem 0;
+}
+
+.statement-inner {
+  border-bottom: 1px solid var(--glass-border);
+  border-top: 1px solid var(--glass-border);
+  padding-block: 4rem;
+}
+
+.statement p {
+  color: white;
+  font-family: Outfit, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.65rem, 4vw, 3.4rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.05;
+  max-width: 1040px;
+}
+
 .section-heading {
   margin-bottom: 3rem;
   max-width: 860px;
@@ -249,6 +291,83 @@ footer h2 {
   font-size: clamp(2.25rem, 5vw, 4.4rem);
   letter-spacing: -0.04em;
   line-height: 0.98;
+}
+
+.section-heading > p:not(.eyebrow) {
+  font-size: 1.05rem;
+  margin-top: 1.25rem;
+  max-width: 720px;
+}
+
+.metrics-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.metric {
+  min-height: 120px;
+  padding: 1.4rem;
+}
+
+.metric span {
+  color: white;
+  display: block;
+  font-family: Outfit, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: clamp(1.2rem, 2vw, 1.8rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.story-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: minmax(0, 1.25fr) minmax(280px, 0.75fr);
+}
+
+.narrative-card,
+.portrait-card {
+  padding: 2rem;
+}
+
+.narrative-card h3,
+.portrait-card h3 {
+  font-size: clamp(1.8rem, 3vw, 3rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.portrait-card {
+  align-content: end;
+  display: grid;
+  min-height: 420px;
+  position: relative;
+}
+
+.portrait-card::before {
+  background:
+    radial-gradient(circle at center, rgba(59, 130, 246, 0.28), transparent 36%),
+    linear-gradient(135deg, rgba(59, 130, 246, 0.2), rgba(139, 92, 246, 0.08));
+  border-radius: 999px;
+  content: "";
+  height: 220px;
+  left: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translateX(-50%);
+  width: 220px;
+}
+
+.portrait-mark {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: Outfit, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 4rem;
+  font-weight: 800;
+  letter-spacing: -0.08em;
+  position: relative;
+  text-align: center;
 }
 
 .bento-grid {
@@ -334,6 +453,207 @@ footer h2 {
   padding: 0.58rem 0.85rem;
 }
 
+.thesis-section {
+  background:
+    radial-gradient(circle at 18% 28%, rgba(198, 42, 39, 0.14), transparent 28rem),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.02), transparent);
+}
+
+.thesis-grid {
+  align-items: center;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1.08fr);
+}
+
+.network-stage {
+  aspect-ratio: 1 / 0.78;
+  min-height: 430px;
+  overflow: hidden;
+  position: relative;
+}
+
+.network-stage::before {
+  background:
+    radial-gradient(circle at 35% 35%, rgba(72, 191, 227, 0.22), transparent 24%),
+    radial-gradient(circle at 70% 58%, rgba(139, 92, 246, 0.2), transparent 28%);
+  content: "";
+  inset: 0;
+  position: absolute;
+}
+
+.node {
+  align-items: center;
+  background: var(--accent-gradient);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  box-shadow: 0 0 32px rgba(59, 130, 246, 0.42);
+  color: white;
+  display: flex;
+  font-weight: 800;
+  height: 56px;
+  justify-content: center;
+  position: absolute;
+  width: 56px;
+  z-index: 3;
+}
+
+.node-a { left: 18%; top: 25%; }
+.node-b { left: 50%; top: 16%; }
+.node-c { right: 18%; top: 36%; }
+.node-d { left: 32%; bottom: 22%; }
+.node-e { right: 28%; bottom: 18%; }
+
+.network-line {
+  background: linear-gradient(90deg, transparent, rgba(72, 191, 227, 0.7), transparent);
+  height: 2px;
+  position: absolute;
+  transform-origin: left center;
+  z-index: 2;
+}
+
+.line-a {
+  left: 24%;
+  top: 35%;
+  transform: rotate(-12deg);
+  width: 48%;
+}
+
+.line-b {
+  left: 36%;
+  top: 48%;
+  transform: rotate(28deg);
+  width: 40%;
+}
+
+.line-c {
+  left: 25%;
+  top: 64%;
+  transform: rotate(-20deg);
+  width: 52%;
+}
+
+.network-caption {
+  bottom: 1.5rem;
+  left: 1.5rem;
+  position: absolute;
+  right: 1.5rem;
+  z-index: 4;
+}
+
+.network-caption strong {
+  color: white;
+  display: block;
+  font-size: 1.25rem;
+  margin-bottom: 0.3rem;
+}
+
+.thesis-methods {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  padding-top: 3rem;
+}
+
+.method-card {
+  min-height: 120px;
+  padding: 1.1rem;
+}
+
+.method-card span {
+  color: white;
+  display: block;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.visual-grid,
+.journal-grid,
+.current-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.visual-card,
+.journal-card,
+.current-card {
+  padding: 2rem;
+}
+
+.visual-card {
+  min-height: 260px;
+}
+
+.visual-card h3,
+.journal-card h3 {
+  font-size: clamp(1.45rem, 2.2vw, 2.4rem);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.journey-line {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  overflow: hidden;
+}
+
+.journey-step {
+  border-right: 1px solid var(--glass-border);
+  min-height: 220px;
+  padding: 1.3rem;
+}
+
+.journey-step:last-child {
+  border-right: 0;
+}
+
+.journey-step span,
+.journal-card span {
+  color: var(--accent-cyan);
+  display: block;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.journey-step p {
+  color: white;
+  font-family: Outfit, Inter, ui-sans-serif, system-ui, sans-serif;
+  font-size: 1.1rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.08;
+}
+
+.recognition-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.5rem;
+}
+
+.recognition-list span {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: white;
+  padding: 0.85rem 1rem;
+}
+
+.current-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.current-card {
+  min-height: 360px;
+}
+
+.current-card h2 {
+  font-size: clamp(2rem, 4vw, 3.8rem);
+  letter-spacing: -0.05em;
+  line-height: 0.96;
+}
+
 .timeline {
   border-radius: 24px;
   overflow: hidden;
@@ -403,11 +723,13 @@ footer {
   justify-content: center;
 }
 
-.contact-links a {
+.contact-links a,
+.disabled-link {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid var(--glass-border);
   border-radius: 999px;
   color: white;
+  display: inline-block;
   font-weight: 700;
   padding: 0.9rem 1.4rem;
   transition: var(--transition-smooth);
@@ -416,6 +738,10 @@ footer {
 .contact-links a:hover {
   background: rgba(255, 255, 255, 0.11);
   transform: translateY(-3px);
+}
+
+.disabled-link {
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .copyright {
@@ -440,7 +766,12 @@ footer {
 
 @media (max-width: 992px) {
   .bento-grid,
-  .education-grid {
+  .education-grid,
+  .metrics-grid,
+  .visual-grid,
+  .journal-grid,
+  .journey-line,
+  .thesis-methods {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -451,6 +782,12 @@ footer {
   .hero-orbit {
     height: 80vw;
     width: 80vw;
+  }
+
+  .story-grid,
+  .thesis-grid,
+  .current-grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -493,7 +830,12 @@ footer {
 
   .bento-grid,
   .education-grid,
-  .timeline-row {
+  .timeline-row,
+  .metrics-grid,
+  .visual-grid,
+  .journal-grid,
+  .journey-line,
+  .thesis-methods {
     grid-template-columns: 1fr;
   }
 
@@ -501,6 +843,25 @@ footer {
   .bento-item.tall {
     grid-column: span 1;
     grid-row: span 1;
+  }
+
+  .statement-inner {
+    padding-block: 2.75rem;
+  }
+
+  .portrait-card,
+  .network-stage {
+    min-height: 340px;
+  }
+
+  .journey-step {
+    border-bottom: 1px solid var(--glass-border);
+    border-right: 0;
+    min-height: auto;
+  }
+
+  .journey-step:last-child {
+    border-bottom: 0;
   }
 }
 

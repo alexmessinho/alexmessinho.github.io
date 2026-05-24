@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Alejandro Diaz Barreiro - Sports Analytics, Systems & Team Performance",
+  title: "Alejandro Diaz Barreiro - Sport, Systems & Team Performance",
   description:
-    "Portfolio for Alejandro Diaz Barreiro Aldana, an Industrial and Systems Engineering graduate student focused on optimization, analytics, sports analytics, and team performance.",
+    "A cinematic personal website for Alejandro Diaz Barreiro Aldana, exploring sports analytics, team optimization, systems thinking, storytelling, and human performance.",
 };
 
 export default function RootLayout({
