@@ -1,61 +1,66 @@
-const competencies = [
-  "Advanced data analytics",
-  "Optimization modeling",
-  "Simulation",
-  "KPI and performance analysis",
-  "Operational efficiency",
-  "Energy auditing",
-  "Executive communication",
-  "Stakeholder alignment",
+const highlights = [
+  {
+    label: "University of Miami",
+    value: "M.Sc. Industrial & Systems Engineering",
+    detail: "GPA 3.96",
+  },
+  {
+    label: "Research Focus",
+    value: "Team performance, SNA, optimization",
+    detail: "Healthcare systems and sports analytics",
+  },
+  {
+    label: "Energy Analytics",
+    value: "DOE industrial assessment work",
+    detail: "Operational efficiency recommendations",
+  },
+  {
+    label: "Languages",
+    value: "English and Spanish",
+    detail: "French working proficiency",
+  },
 ];
 
 const experience = [
   {
     role: "Graduate Research Assistant",
-    organization: "Simulation & Optimization Research Lab, University of Miami",
+    organization: "Simulation & Optimization Research Lab",
     period: "Feb 2025 - May 2026",
-    details:
-      "Designing optimization models that connect network structures, healthcare performance, coordination, and scheduling decisions.",
+    copy:
+      "Designed optimization models linking network structures, team coordination, scheduling strategy, and performance outcomes in healthcare systems.",
   },
   {
     role: "Senior Energy Analyst",
     organization: "University of Miami Industrial Assessment Center",
     period: "Aug 2024 - May 2026",
-    details:
-      "Conducting Department of Energy industrial audits and translating operational data into decision-ready efficiency recommendations.",
+    copy:
+      "Conducted industrial energy audits under Department of Energy programs and translated operational data into decision-ready recommendations.",
   },
   {
     role: "Consultant",
     organization: "Proyecto Cantera, Juntos por Mexico",
     period: "Feb 2023 - Jun 2023",
-    details:
-      "Developed pricing, resource allocation, and fundraising frameworks to improve program sustainability.",
+    copy:
+      "Developed pricing, operational, fundraising, and resource allocation frameworks to strengthen program sustainability.",
   },
   {
     role: "Consultant",
     organization: "Acertramex S.A. de C.V.",
     period: "Feb 2023 - Mar 2023",
-    details:
-      "Applied Lean diagnostics and root-cause analysis to propose maintenance, process, and visual control improvements.",
+    copy:
+      "Applied Lean diagnostics and root-cause analysis to propose preventive maintenance and visual control improvements.",
   },
 ];
 
-const education = [
-  {
-    school: "University of Miami",
-    degree: "M.Sc. Industrial and Systems Engineering",
-    detail: "GPA: 3.96",
-  },
-  {
-    school: "Tecnologico de Monterrey",
-    degree: "B.S. Industrial and Systems Engineering",
-    detail: "Final grade: 92.86%",
-  },
-  {
-    school: "Macquarie University",
-    degree: "Semester Abroad",
-    detail: "Sydney, Australia",
-  },
+const skills = [
+  "Advanced data analytics",
+  "Optimization modeling",
+  "Simulation",
+  "KPI analysis",
+  "Operational efficiency",
+  "Energy auditing",
+  "Stakeholder alignment",
+  "Executive communication",
 ];
 
 const tools = [
@@ -73,122 +78,203 @@ const tools = [
   "LaTeX",
 ];
 
+const education = [
+  {
+    school: "University of Miami",
+    degree: "M.Sc. Industrial and Systems Engineering",
+    detail: "Coral Gables, FL / GPA 3.96",
+  },
+  {
+    school: "Tecnologico de Monterrey",
+    degree: "B.S. Industrial and Systems Engineering",
+    detail: "Mexico City, Mexico / Final grade 92.86%",
+  },
+  {
+    school: "Macquarie University",
+    degree: "Semester Abroad",
+    detail: "Sydney, Australia",
+  },
+];
+
 export default function Home() {
   return (
-    <main>
-      <section className="hero" aria-labelledby="intro-heading">
-        <nav className="topbar" aria-label="Primary navigation">
-          <a href="#work">Work</a>
-          <a href="#skills">Skills</a>
-          <a href="#education">Education</a>
-          <a href="#contact">Contact</a>
-        </nav>
+    <>
+      <nav id="navbar" aria-label="Primary navigation">
+        <div className="container nav-content">
+          <a className="logo" href="#hero" aria-label="Alejandro home">
+            ALEX.
+          </a>
+          <div className="nav-links">
+            <a href="#about">About</a>
+            <a href="#research">Research</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+      </nav>
 
-        <div className="heroGrid">
-          <div className="heroCopy">
-            <p className="eyebrow">Industrial & Systems Engineering</p>
-            <h1 id="intro-heading">Alejandro Diaz Barreiro Aldana</h1>
-            <p className="lead">
-              I turn complex systems into clear operating decisions through
-              optimization, analytics, and performance modeling.
-            </p>
-            <div className="heroActions" aria-label="Contact links">
-              <a className="button primary" href="mailto:alexdiazbarreiro@miami.edu">
-                Email me
-              </a>
-              <a
-                className="button secondary"
-                href="https://www.linkedin.com/in/alejandro-diaz-barreiro"
-              >
-                LinkedIn
-              </a>
-            </div>
+      <header id="hero">
+        <div className="hero-orbit" aria-hidden="true" />
+        <div className="hero-content reveal">
+          <p className="eyebrow">Sports Analytics / Systems / Team Performance</p>
+          <h1>Alejandro Diaz Barreiro Aldana</h1>
+          <p>
+            Systems thinker exploring how teams, relationships, and human
+            dynamics shape performance across sports analytics, healthcare
+            systems, and optimization.
+          </p>
+          <div className="hero-btns">
+            <a href="#research" className="btn btn-primary">
+              View My Work
+            </a>
+            <a href="#contact" className="btn btn-secondary">
+              Contact
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main className="container">
+        <section id="about">
+          <div className="section-heading reveal">
+            <p className="eyebrow">Profile & Expertise</p>
+            <h2>Where data meets human systems.</h2>
           </div>
 
-          <aside className="profilePanel" aria-label="Portfolio summary">
-            <p>Miami, FL</p>
-            <strong>Graduate student at the University of Miami</strong>
-            <span>
-              Focused on healthcare systems, energy efficiency, organizational
-              design, and team performance.
-            </span>
-          </aside>
-        </div>
-      </section>
-
-      <section className="section introSection">
-        <p>
-          My work sits where people, processes, and data meet. I use analytical
-          models to understand how structure shapes outcomes, then translate
-          that complexity into practical recommendations leaders can act on.
-        </p>
-      </section>
-
-      <section className="section" id="work">
-        <div className="sectionHeader">
-          <p className="eyebrow">Experience</p>
-          <h2>Selected Work</h2>
-        </div>
-        <div className="timeline">
-          {experience.map((item) => (
-            <article className="timelineItem" key={item.organization}>
-              <div>
-                <h3>{item.role}</h3>
-                <p>{item.organization}</p>
-              </div>
-              <time>{item.period}</time>
-              <p>{item.details}</p>
+          <div className="bento-grid">
+            <article className="bento-item glass large reveal">
+              <h3>About Me</h3>
+              <p>
+                I am a graduate Industrial and Systems Engineering student at
+                the University of Miami focused on understanding how complex
+                systems drive performance across high-stakes environments. My
+                work turns relationships, constraints, and operating data into
+                clearer decisions.
+              </p>
             </article>
-          ))}
-        </div>
-      </section>
 
-      <section className="section skillsSection" id="skills">
-        <div className="sectionHeader">
-          <p className="eyebrow">Capabilities</p>
-          <h2>What I Bring</h2>
-        </div>
-        <div className="splitGrid">
-          <div className="tagGroup" aria-label="Core competencies">
-            {competencies.map((skill) => (
-              <span key={skill}>{skill}</span>
+            <article className="bento-item glass tall reveal accent-card">
+              <span className="card-kicker">Flagship Focus</span>
+              <h3>Team Performance Modeling</h3>
+              <p>
+                Exploring how network structure, coordination, and scheduling
+                shape outcomes in healthcare and elite team environments.
+              </p>
+            </article>
+
+            {highlights.map((item) => (
+              <article className="bento-item glass reveal" key={item.label}>
+                <span className="card-kicker">{item.label}</span>
+                <h3>{item.value}</h3>
+                <p>{item.detail}</p>
+              </article>
             ))}
           </div>
-          <div className="toolsPanel">
-            <h3>Tools and technologies</h3>
-            <p>{tools.join(" / ")}</p>
+        </section>
+
+        <section id="research">
+          <div className="section-heading reveal">
+            <p className="eyebrow">Research & Projects</p>
+            <h2>Optimization, networks, and performance.</h2>
           </div>
-        </div>
-      </section>
 
-      <section className="section" id="education">
-        <div className="sectionHeader">
-          <p className="eyebrow">Education</p>
-          <h2>Academic Foundation</h2>
-        </div>
-        <div className="educationGrid">
-          {education.map((item) => (
-            <article className="educationCard" key={item.school}>
-              <h3>{item.school}</h3>
-              <p>{item.degree}</p>
-              <span>{item.detail}</span>
+          <div className="bento-grid research-grid">
+            <article className="bento-item glass tall reveal">
+              <span className="card-kicker">Research</span>
+              <h3>Healthcare Systems Optimization</h3>
+              <p>
+                Modeling team coordination, scheduling, and structural
+                relationships to improve reliability and efficiency in complex
+                care environments.
+              </p>
             </article>
-          ))}
-        </div>
-      </section>
 
-      <section className="contactBand" id="contact">
-        <div>
-          <p className="eyebrow">Contact</p>
-          <h2>Let&apos;s build clearer decisions from complex systems.</h2>
+            <article className="bento-item glass large reveal">
+              <span className="card-kicker">Applied Analytics</span>
+              <h3>Industrial Energy Assessment</h3>
+              <p>
+                Analyzing operational data from industrial facilities to
+                identify inefficiencies and translate findings into practical,
+                client-ready recommendations.
+              </p>
+              <div className="skill-cloud">
+                {skills.map((skill) => (
+                  <span key={skill}>{skill}</span>
+                ))}
+              </div>
+            </article>
+
+            <article className="bento-item glass reveal">
+              <span className="card-kicker">Conferences</span>
+              <h3>ACS Surgeons & Engineers 2026</h3>
+              <p>Presenter / UM Research Symposium 2025 Presenter & Awardee</p>
+            </article>
+
+            <article className="bento-item glass reveal">
+              <span className="card-kicker">Tools</span>
+              <h3>Analytics Stack</h3>
+              <p>{tools.join(" / ")}</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="experience">
+          <div className="section-heading reveal">
+            <p className="eyebrow">Experience</p>
+            <h2>Selected roles and work.</h2>
+          </div>
+
+          <div className="timeline glass reveal">
+            {experience.map((item) => (
+              <article className="timeline-row" key={item.organization}>
+                <div>
+                  <span>{item.period}</span>
+                  <h3>{item.role}</h3>
+                </div>
+                <div>
+                  <h4>{item.organization}</h4>
+                  <p>{item.copy}</p>
+                </div>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section id="education">
+          <div className="section-heading reveal">
+            <p className="eyebrow">Education</p>
+            <h2>Academic foundation.</h2>
+          </div>
+
+          <div className="education-grid">
+            {education.map((item) => (
+              <article className="education-card glass reveal" key={item.school}>
+                <h3>{item.school}</h3>
+                <p>{item.degree}</p>
+                <span>{item.detail}</span>
+              </article>
+            ))}
+          </div>
+        </section>
+      </main>
+
+      <footer id="contact">
+        <div className="container contact-content">
+          <div>
+            <p className="eyebrow">Let&apos;s Connect</p>
+            <h2>Interested in collaboration or questions about my work?</h2>
+          </div>
+          <div className="contact-links">
+            <a href="mailto:alexdiazbarreiro@miami.edu">Email</a>
+            <a href="https://www.linkedin.com/in/alejandro-diaz-barreiro">
+              LinkedIn
+            </a>
+          </div>
+          <p className="copyright">
+            &copy; 2026 Alejandro Diaz Barreiro Aldana. All rights reserved.
+          </p>
         </div>
-        <div className="contactLinks">
-          <a href="mailto:alexdiazbarreiro@miami.edu">alexdiazbarreiro@miami.edu</a>
-          <a href="https://www.linkedin.com/in/alejandro-diaz-barreiro">
-            linkedin.com/in/alejandro-diaz-barreiro
-          </a>
-        </div>
-      </section>
-    </main>
+      </footer>
+    </>
   );
 }
