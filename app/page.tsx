@@ -1,15 +1,16 @@
-const principles = [
-  "Human connection",
-  "Systems thinking",
-  "Team performance",
-  "Strategic storytelling",
-];
+import {
+  ArrowRight,
+  BarChart3,
+  FileText,
+  Mail,
+  Network,
+  Send,
+} from "lucide-react";
 
-const metrics = [
+const heroMetrics = [
   "M.S. Industrial Engineering",
-  "Social Network Analysis",
-  "Team optimisation",
-  "Sports strategy",
+  "Thesis in team formation",
+  "Sport analytics direction",
 ];
 
 const researchAreas = [
@@ -54,12 +55,12 @@ const thesisMethods = [
 ];
 
 const journey = [
-  "Undergraduate engineering foundation",
-  "Research beginnings in complex systems",
+  "Engineering foundation",
+  "Research in complex systems",
   "Surgical team optimisation",
-  "Master's thesis on sport team formation",
-  "Conferences, recognition and field-building",
-  "Future vision in elite sport strategy",
+  "Sport team formation thesis",
+  "Research presentations",
+  "Elite sport strategy ambition",
 ];
 
 const recognition = [
@@ -94,45 +95,51 @@ export default function Home() {
     <>
       <nav id="navbar" aria-label="Primary navigation">
         <div className="container nav-content">
-          <a className="logo" href="#hero" aria-label="Alejandro home">
+          <a className="logo focus-ring" href="#hero" aria-label="Alejandro home">
             ALEX.
           </a>
           <div className="nav-links">
-            <a href="#thesis">Thesis</a>
-            <a href="#research">Research</a>
-            <a href="#journal">Journal</a>
-            <a href="#contact">Contact</a>
+            <a className="focus-ring" href="#thesis">Thesis</a>
+            <a className="focus-ring" href="#research">Research</a>
+            <a className="focus-ring" href="#journal">Journal</a>
+            <a className="nav-cta focus-ring" href="#contact">
+              Contact <ArrowRight aria-hidden="true" size={14} />
+            </a>
           </div>
         </div>
       </nav>
 
       <header id="hero">
-        <div className="hero-orbit" aria-hidden="true" />
+        <div className="hero-grid-layer" aria-hidden="true" />
         <div className="hero-content reveal">
           <p className="eyebrow">Sport / Systems / Human Performance</p>
-          <h1>Performance is a network.</h1>
+          <h1>
+            Performance is a <span>network.</span>
+          </h1>
           <p>
             I study how teams perform, adapt and succeed through data,
             optimisation, storytelling and human connection.
           </p>
-          <div className="hero-identity">
-            <span>Alejandro Diaz Barreiro Aldana</span>
-            <span>University of Miami</span>
-            <span>Future sports strategy & analytics leader</span>
-          </div>
           <div className="hero-btns">
-            <a href="#thesis" className="btn btn-primary">
-              Explore the thesis
+            <a href="#thesis" className="btn btn-primary focus-ring">
+              Explore thesis <ArrowRight aria-hidden="true" size={17} />
             </a>
-            <a href="#philosophy" className="btn btn-secondary">
-              Read the philosophy
+            <a href="mailto:alexdiazbarreiro@miami.edu?subject=Portfolio%20enquiry" className="btn btn-secondary focus-ring">
+              <Mail aria-hidden="true" size={17} /> Start a conversation
             </a>
+          </div>
+          <div className="hero-metrics" aria-label="Profile highlights">
+            {heroMetrics.map((metric) => (
+              <div className="metric-card glass-panel" key={metric}>
+                <span>{metric}</span>
+              </div>
+            ))}
           </div>
         </div>
       </header>
 
       <main>
-        <section className="statement" id="philosophy">
+        <section className="statement section-grid" id="philosophy">
           <div className="container statement-inner reveal">
             <p>
               Success rarely belongs to isolated talent alone. It emerges from
@@ -142,23 +149,13 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container rhythm-section">
-          <div className="metrics-grid">
-            {metrics.map((item) => (
-              <div className="metric glass reveal" key={item}>
-                <span>{item}</span>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section className="container split-story" id="about">
           <div className="section-heading reveal">
             <p className="eyebrow">About</p>
             <h2>A systems thinker with a sports executive&apos;s lens.</h2>
           </div>
           <div className="story-grid">
-            <article className="glass narrative-card reveal">
+            <article className="narrative-card reveal">
               <h3>The throughline</h3>
               <p>
                 My work sits at the intersection of sport, optimisation,
@@ -167,8 +164,8 @@ export default function Home() {
                 people determines what they are capable of becoming together.
               </p>
             </article>
-            <article className="glass portrait-card reveal" aria-label="Portrait placeholder">
-              <div className="portrait-mark">ADB</div>
+            <article className="identity-panel glass-panel reveal" aria-label="Identity summary">
+              <div className="identity-mark">ADB</div>
               <p>
                 A personal brand built around analytical depth, emotional
                 intelligence and long-term ambition in elite sport.
@@ -177,7 +174,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="thesis-section" id="thesis">
+        <section className="thesis-section section-grid" id="thesis">
           <div className="container thesis-grid">
             <div className="section-heading reveal">
               <p className="eyebrow">Flagship Thesis</p>
@@ -189,7 +186,8 @@ export default function Home() {
               </p>
             </div>
 
-            <div className="network-stage glass reveal" aria-label="Abstract team network visualization">
+            <div className="network-stage glass-panel reveal" aria-label="Abstract team network visualisation">
+              <Network className="stage-icon" aria-hidden="true" size={22} />
               <div className="network-line line-a" />
               <div className="network-line line-b" />
               <div className="network-line line-c" />
@@ -207,7 +205,7 @@ export default function Home() {
 
           <div className="container thesis-methods">
             {thesisMethods.map((method) => (
-              <article className="method-card glass reveal" key={method}>
+              <article className="method-card glass-panel reveal" key={method}>
                 <span>{method}</span>
               </article>
             ))}
@@ -223,7 +221,7 @@ export default function Home() {
           <div className="bento-grid research-grid">
             {researchAreas.map((area, index) => (
               <article
-                className={`bento-item glass reveal ${index === 0 ? "large" : ""}`}
+                className={`bento-item glass-panel reveal ${index === 0 ? "large" : ""}`}
                 key={area.title}
               >
                 <span className="card-kicker">0{index + 1}</span>
@@ -234,24 +232,42 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="container visual-section" id="visuals">
+        <section className="container tool-section" id="visuals">
           <div className="section-heading reveal">
             <p className="eyebrow">Interactive Direction</p>
             <h2>Visual tools that make invisible relationships legible.</h2>
           </div>
-          <div className="visual-grid">
-            <article className="glass visual-card reveal">
-              <h3>Network graphs</h3>
-              <p>Player interaction maps and team synergy structures.</p>
+          <div className="tool-grid">
+            <article className="visual-panel glass-panel reveal">
+              <BarChart3 className="stage-icon" aria-hidden="true" size={22} />
+              <h3>Research visualisation system</h3>
+              <p>
+                Future modules can translate team networks, structural
+                constraints and robustness trade-offs into readable analytical
+                interfaces for professional review.
+              </p>
+              <div className="chart-bars" aria-hidden="true">
+                <span />
+                <span />
+                <span />
+                <span />
+                <span />
+              </div>
             </article>
-            <article className="glass visual-card reveal">
-              <h3>Trade-off charts</h3>
-              <p>Robustness versus performance under different constraints.</p>
-            </article>
-            <article className="glass visual-card reveal">
-              <h3>Lineup scenarios</h3>
-              <p>Optimisation demonstrations for strategic team formation.</p>
-            </article>
+            <aside className="tool-sidebar reveal" aria-label="Visualisation concepts">
+              <div className="glass-panel side-metric">
+                <strong>Network graphs</strong>
+                <p>Player interaction maps and team synergy structures.</p>
+              </div>
+              <div className="glass-panel side-metric">
+                <strong>Trade-off charts</strong>
+                <p>Robustness versus performance under constraints.</p>
+              </div>
+              <div className="glass-panel side-metric">
+                <strong>Line-up scenarios</strong>
+                <p>Optimisation demonstrations for strategic team formation.</p>
+              </div>
+            </aside>
           </div>
         </section>
 
@@ -260,7 +276,7 @@ export default function Home() {
             <p className="eyebrow">Journey</p>
             <h2>A path from engineering to elite sport leadership.</h2>
           </div>
-          <div className="journey-line glass reveal">
+          <div className="journey-line glass-panel reveal">
             {journey.map((step, index) => (
               <article className="journey-step" key={step}>
                 <span>{String(index + 1).padStart(2, "0")}</span>
@@ -276,15 +292,15 @@ export default function Home() {
             <h2>Writing as a way to think in public.</h2>
           </div>
           <div className="journal-grid">
-            <article className="glass journal-card reveal">
+            <article className="glass-panel journal-card reveal">
               <span>Reflection</span>
               <h3>What sport teaches us about systems.</h3>
               <p>
-                A space for essays on leadership, team dynamics, decision-making,
+                A space for essays on leadership, team dynamics, decision-making
                 and the hidden architecture of performance.
               </p>
             </article>
-            <article className="glass journal-card reveal">
+            <article className="glass-panel journal-card reveal">
               <span>Observation</span>
               <h3>The human side of analytics.</h3>
               <p>
@@ -300,7 +316,7 @@ export default function Home() {
             <p className="eyebrow">Recognition & Momentum</p>
             <h2>Signals of credibility without losing the human story.</h2>
           </div>
-          <div className="recognition-list glass reveal">
+          <div className="recognition-list glass-panel reveal">
             {recognition.map((item) => (
               <span key={item}>{item}</span>
             ))}
@@ -309,7 +325,7 @@ export default function Home() {
 
         <section className="container current-section">
           <div className="current-grid">
-            <article className="glass current-card reveal">
+            <article className="glass-panel current-card reveal">
               <p className="eyebrow">Currently Exploring</p>
               <h2>How research can become strategic advantage in sport.</h2>
               <div className="skill-cloud">
@@ -318,7 +334,7 @@ export default function Home() {
                 ))}
               </div>
             </article>
-            <article className="glass current-card reveal">
+            <article className="glass-panel current-card reveal">
               <p className="eyebrow">Beyond Work</p>
               <h2>Sport, creativity, culture and the stories that shape us.</h2>
               <div className="skill-cloud">
@@ -332,25 +348,47 @@ export default function Home() {
       </main>
 
       <footer id="contact">
-        <div className="container contact-content">
-          <div>
+        <div className="container contact-layout">
+          <div className="contact-copy">
             <p className="eyebrow">Contact</p>
             <h2>For research, strategy, analytics or sport leadership conversations.</h2>
+            <div className="contact-details">
+              <a className="focus-ring" href="mailto:alexdiazbarreiro@miami.edu">
+                <Mail aria-hidden="true" size={16} /> alexdiazbarreiro@miami.edu
+              </a>
+              <a className="focus-ring" href="mailto:alexdiazbarreiro@miami.edu?subject=CV%20request">
+                <FileText aria-hidden="true" size={16} /> Request CV
+              </a>
+            </div>
           </div>
-          <div className="contact-links">
-            <a href="mailto:alexdiazbarreiro@miami.edu">Email</a>
-            <a href="https://www.linkedin.com/in/alejandro-diaz-barreiro">
-              LinkedIn
-            </a>
-            <span className="disabled-link" aria-label="CV download link coming soon">
-              CV coming soon
-            </span>
-          </div>
-          <p className="copyright">
-            &copy; 2026 Alejandro Diaz Barreiro Aldana. Built as a living archive
-            of research, sport, systems and story.
-          </p>
+
+          <form
+            className="contact-form glass-panel"
+            action="mailto:alexdiazbarreiro@miami.edu"
+            method="post"
+            encType="text/plain"
+          >
+            <label>
+              Name
+              <input className="focus-ring" name="name" type="text" autoComplete="name" />
+            </label>
+            <label>
+              Email
+              <input className="focus-ring" name="email" type="email" autoComplete="email" />
+            </label>
+            <label>
+              Message
+              <textarea className="focus-ring" name="message" rows={5} />
+            </label>
+            <button className="btn btn-primary focus-ring" type="submit">
+              Open email draft <Send aria-hidden="true" size={16} />
+            </button>
+          </form>
         </div>
+        <p className="container copyright">
+          &copy; 2026 Alejandro Diaz Barreiro Aldana. Built as a living archive
+          of research, sport, systems and story.
+        </p>
       </footer>
     </>
   );
