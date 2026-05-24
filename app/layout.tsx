@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Alejandro Diaz Barreiro - Sport, Systems & Team Performance",
   description:
-    "A cinematic personal website for Alejandro Diaz Barreiro Aldana, exploring sports analytics, team optimization, systems thinking, storytelling, and human performance.",
+    "A cinematic personal website for Alejandro Diaz Barreiro Aldana, exploring sports analytics, team optimisation, systems thinking, storytelling and human performance.",
 };
 
 export default function RootLayout({

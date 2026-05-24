@@ -8,7 +8,7 @@ const principles = [
 const metrics = [
   "M.S. Industrial Engineering",
   "Social Network Analysis",
-  "Team optimization",
+  "Team optimisation",
   "Sports strategy",
 ];
 
@@ -16,27 +16,27 @@ const researchAreas = [
   {
     title: "Sports Analytics",
     copy:
-      "Using data, networks, and context to understand how teams form, adapt, and create collective advantage.",
+      "Using data, networks and context to understand how teams form, adapt and create collective advantage.",
   },
   {
     title: "Healthcare Systems",
     copy:
-      "Studying coordination, continuity, and operational reliability inside complex care environments.",
+      "Studying coordination, continuity and operational reliability inside complex care environments.",
   },
   {
-    title: "Mathematical Optimization",
+    title: "Mathematical Optimisation",
     copy:
       "Designing decision frameworks that balance short-term performance with long-term resilience.",
   },
   {
     title: "Social Network Analysis",
     copy:
-      "Modeling relationships as performance infrastructure rather than background noise.",
+      "Modelling relationships as performance infrastructure rather than background noise.",
   },
   {
     title: "Sports Biomechanics",
     copy:
-      "Exploring how movement, constraint, and human capability shape performance outcomes.",
+      "Exploring how movement, constraint and human capability shape performance outcomes.",
   },
   {
     title: "Energy Analytics",
@@ -48,7 +48,7 @@ const researchAreas = [
 const thesisMethods = [
   "Binary Integer Programming",
   "Social Network Analysis",
-  "Robustness modeling",
+  "Robustness modelling",
   "Scenario analysis",
   "Miami Heat case study",
 ];
@@ -56,9 +56,9 @@ const thesisMethods = [
 const journey = [
   "Undergraduate engineering foundation",
   "Research beginnings in complex systems",
-  "Surgical team optimization",
+  "Surgical team optimisation",
   "Master's thesis on sport team formation",
-  "Conferences, recognition, and field-building",
+  "Conferences, recognition and field-building",
   "Future vision in elite sport strategy",
 ];
 
@@ -72,7 +72,7 @@ const recognition = [
 
 const focusAreas = [
   "Sports analytics",
-  "Team optimization",
+  "Team optimisation",
   "Strategic decision-making",
   "Research-to-commercial applications",
   "Leadership systems",
@@ -112,8 +112,8 @@ export default function Home() {
           <p className="eyebrow">Sport / Systems / Human Performance</p>
           <h1>Performance is a network.</h1>
           <p>
-            I study how teams perform, adapt, and succeed through data,
-            optimization, storytelling, and human connection.
+            I study how teams perform, adapt and succeed through data,
+            optimisation, storytelling and human connection.
           </p>
           <div className="hero-identity">
             <span>Alejandro Diaz Barreiro Aldana</span>
@@ -136,7 +136,7 @@ export default function Home() {
           <div className="container statement-inner reveal">
             <p>
               Success rarely belongs to isolated talent alone. It emerges from
-              the quality of relationships, the design of systems, and the
+              the quality of relationships, the design of systems and the
               ability of people to collaborate under pressure.
             </p>
           </div>
@@ -161,8 +161,8 @@ export default function Home() {
             <article className="glass narrative-card reveal">
               <h3>The throughline</h3>
               <p>
-                My work sits at the intersection of sport, optimization,
-                research, leadership, and storytelling. I am drawn to moments
+                My work sits at the intersection of sport, optimisation,
+                research, leadership and storytelling. I am drawn to moments
                 where talent alone is not enough, where the structure around
                 people determines what they are capable of becoming together.
               </p>
@@ -171,7 +171,7 @@ export default function Home() {
               <div className="portrait-mark">ADB</div>
               <p>
                 A personal brand built around analytical depth, emotional
-                intelligence, and long-term ambition in elite sport.
+                intelligence and long-term ambition in elite sport.
               </p>
             </article>
           </div>
@@ -200,7 +200,7 @@ export default function Home() {
               <span className="node node-e">5</span>
               <div className="network-caption">
                 <strong>Team chemistry as structure</strong>
-                <p>Relationships, robustness, proficiency, and continuity.</p>
+                <p>Relationships, robustness, proficiency and continuity.</p>
               </div>
             </div>
           </div>
@@ -250,7 +250,7 @@ export default function Home() {
             </article>
             <article className="glass visual-card reveal">
               <h3>Lineup scenarios</h3>
-              <p>Optimization demonstrations for strategic team formation.</p>
+              <p>Optimisation demonstrations for strategic team formation.</p>
             </article>
           </div>
         </section>
@@ -289,7 +289,7 @@ export default function Home() {
               <h3>The human side of analytics.</h3>
               <p>
                 Technical work becomes more valuable when it can be understood,
-                communicated, and acted upon by people.
+                communicated and acted upon by people.
               </p>
             </article>
           </div>
@@ -320,7 +320,7 @@ export default function Home() {
             </article>
             <article className="glass current-card reveal">
               <p className="eyebrow">Beyond Work</p>
-              <h2>Sport, creativity, culture, and the stories that shape us.</h2>
+              <h2>Sport, creativity, culture and the stories that shape us.</h2>
               <div className="skill-cloud">
                 {inspirations.map((item) => (
                   <span key={item}>{item}</span>
@@ -335,7 +335,7 @@ export default function Home() {
         <div className="container contact-content">
           <div>
             <p className="eyebrow">Contact</p>
-            <h2>For research, strategy, analytics, or sport leadership conversations.</h2>
+            <h2>For research, strategy, analytics or sport leadership conversations.</h2>
           </div>
           <div className="contact-links">
             <a href="mailto:alexdiazbarreiro@miami.edu">Email</a>
@@ -348,7 +348,7 @@ export default function Home() {
           </div>
           <p className="copyright">
             &copy; 2026 Alejandro Diaz Barreiro Aldana. Built as a living archive
-            of research, sport, systems, and story.
+            of research, sport, systems and story.
           </p>
         </div>
       </footer>
