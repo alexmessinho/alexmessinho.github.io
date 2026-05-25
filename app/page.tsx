@@ -2,7 +2,6 @@ import {
   ArrowRight,
   BarChart3,
   FileText,
-  Linkedin,
   Mail,
   Network,
   Send,
@@ -483,7 +482,7 @@ export default function Home() {
                 className="focus-ring"
                 href="https://www.linkedin.com/in/alejandro-diaz-barreiro/"
               >
-                <Linkedin aria-hidden="true" size={16} /> LinkedIn
+                <ArrowRight aria-hidden="true" size={16} /> LinkedIn
               </a>
               <a className="focus-ring" href="mailto:alexdiazbarreiro@gmail.com?subject=CV%20request">
                 <FileText aria-hidden="true" size={16} /> Request CV
