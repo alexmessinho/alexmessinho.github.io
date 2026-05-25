@@ -2,6 +2,7 @@ import {
   ArrowRight,
   BarChart3,
   FileText,
+  Linkedin,
   Mail,
   Network,
   Send,
@@ -9,40 +10,40 @@ import {
 
 const heroMetrics = [
   "M.S. Industrial Engineering",
-  "Thesis in team formation",
-  "Sport analytics direction",
+  "Team formation thesis",
+  "Sports analytics direction",
 ];
 
 const researchAreas = [
   {
     title: "Sports Analytics",
     copy:
-      "Using data, networks and context to understand how teams form, adapt and create collective advantage.",
-  },
-  {
-    title: "Healthcare Systems",
-    copy:
-      "Studying coordination, continuity and operational reliability inside complex care environments.",
-  },
-  {
-    title: "Mathematical Optimisation",
-    copy:
-      "Designing decision frameworks that balance short-term performance with long-term resilience.",
+      "I study sport as a living system, where data only becomes useful when it explains relationships, pressure and collective behaviour.",
   },
   {
     title: "Social Network Analysis",
     copy:
-      "Modelling relationships as performance infrastructure rather than background noise.",
+      "I map the connections between people so team structure becomes visible, measurable and easier to discuss.",
   },
   {
-    title: "Sports Biomechanics",
+    title: "Mathematical Optimisation",
     copy:
-      "Exploring how movement, constraint and human capability shape performance outcomes.",
+      "I use optimisation to move from intuition to structured decision-making when teams face constraints and trade-offs.",
   },
   {
-    title: "Energy Analytics",
+    title: "Healthcare Systems",
     copy:
-      "Translating operational data into practical improvements for efficiency and sustainability.",
+      "I apply the same systems lens to care environments, where coordination and continuity shape outcomes.",
+  },
+  {
+    title: "Storytelling",
+    copy:
+      "I translate technical work into clear narratives so people can understand the decision, not just the model.",
+  },
+  {
+    title: "Strategy",
+    copy:
+      "I connect research with long-term thinking, especially where performance depends on people working as one system.",
   },
 ];
 
@@ -54,40 +55,116 @@ const thesisMethods = [
   "Miami Heat case study",
 ];
 
+const tools = [
+  { name: "Python", mark: "Py" },
+  { name: "SQL", mark: "SQL" },
+  { name: "R", mark: "R" },
+  { name: "MATLAB", mark: "M" },
+  { name: "Tableau", mark: "T" },
+  { name: "Power BI", mark: "BI" },
+  { name: "AnyLogic", mark: "AL" },
+  { name: "LaTeX", mark: "TeX" },
+  { name: "Excel", mark: "XL" },
+  { name: "VBA", mark: "VBA" },
+];
+
+const schoolLinks = [
+  {
+    name: "Greengates School",
+    logo: "/assets/greengates.png",
+    url: "https://www.greengates.edu.mx/",
+  },
+  {
+    name: "Tec de Monterrey",
+    logo: "/assets/tec.png",
+    url: "https://tec.mx/en/engineering-and-sciences/bs-in-industrial-engineering",
+  },
+  {
+    name: "University of Miami Industrial Engineering",
+    logo: "/assets/um.png",
+    url: "https://ise.coe.miami.edu/",
+  },
+];
+
 const journey = [
-  "Engineering foundation",
-  "Research in complex systems",
-  "Surgical team optimisation",
-  "Sport team formation thesis",
-  "Research presentations",
-  "Elite sport strategy ambition",
+  {
+    step: "01",
+    title: "Engineering foundation",
+    copy:
+      "I learned to break complex problems into systems, constraints and decisions that people can act on.",
+  },
+  {
+    step: "02",
+    title: "Research in complex systems",
+    copy:
+      "I started looking at organisations as living networks where structure shapes what teams can achieve.",
+  },
+  {
+    step: "03",
+    title: "Surgical team optimisation",
+    copy:
+      "I applied optimisation thinking to healthcare environments, where coordination affects safety, flow and performance.",
+  },
+  {
+    step: "04",
+    title: "Sport team formation thesis",
+    copy:
+      "I turned the same lens toward sport, using network science to study team chemistry as a measurable structure.",
+  },
+  {
+    step: "05",
+    title: "Research presentations",
+    copy:
+      "I learned to translate technical work into clear stories for academic, professional and cross-disciplinary audiences.",
+  },
+  {
+    step: "06",
+    title: "Elite sport strategy ambition",
+    copy:
+      "I am building toward leadership roles where analytics, human dynamics and long-term strategy shape performance.",
+  },
 ];
 
 const recognition = [
-  "ISE David J. Sumanth International Graduate Student Merit Award",
-  "University of Miami research recognition",
-  "ACS Surgeons & Engineers Conference",
-  "Surgery Research Day",
-  "Expo Ingenierias",
+  "Research presentation",
+  "Conference moment",
+  "Award recognition",
+  "Poster session",
+  "Team discussion",
 ];
 
-const focusAreas = [
-  "Sports analytics",
-  "Team optimisation",
-  "Strategic decision-making",
-  "Research-to-commercial applications",
-  "Leadership systems",
+const accolades = [
+  {
+    label: "News feature",
+    title: "Optimizing the Operating Room",
+    copy:
+      "A University of Miami College of Engineering story connected to surgical team optimisation and systems research.",
+    href: "https://news.miami.edu/coe/stories/2026/02/optimizing-the-operating-room.html",
+  },
+  {
+    label: "Research experience",
+    title: "Simulation Optimization Research Lab",
+    copy:
+      "SimLab at the University of Miami anchors research in simulation, optimisation and resilient complex systems.",
+    href: "https://simlab.coe.miami.edu/index.html",
+  },
 ];
 
-const inspirations = [
-  "Football",
-  "Storytelling",
-  "Surfing",
-  "Hiking",
-  "Messi",
-  "Kobe Bryant",
-  "The Beatles",
-  "George Lucas",
+const storyCards = [
+  {
+    label: "Currently exploring",
+    title: "How research becomes strategic advantage in sport",
+    copy:
+      "I am following the path from model to conversation to decision, because the best analytical work changes how people see the game.",
+    beats: ["Question", "Model", "Conversation", "Decision"],
+  },
+  {
+    label: "Beyond work",
+    title: "Sport, creativity and the stories that shape ambition",
+    copy:
+      "Football, music, travel and film keep reminding me that performance is emotional as much as technical.",
+    beats: ["Football", "Music", "Film", "Perspective"],
+  },
 ];
 
 export default function Home() {
@@ -96,12 +173,12 @@ export default function Home() {
       <nav id="navbar" aria-label="Primary navigation">
         <div className="container nav-content">
           <a className="logo focus-ring" href="#hero" aria-label="Alejandro home">
-            ALEX.
+            ADBA
           </a>
           <div className="nav-links">
             <a className="focus-ring" href="#thesis">Thesis</a>
             <a className="focus-ring" href="#research">Research</a>
-            <a className="focus-ring" href="#journal">Journal</a>
+            <a className="focus-ring" href="#journey">Journey</a>
             <a className="nav-cta focus-ring" href="#contact">
               Contact <ArrowRight aria-hidden="true" size={14} />
             </a>
@@ -114,23 +191,26 @@ export default function Home() {
         <div className="hero-content reveal">
           <p className="eyebrow">Sport / Systems / Human Performance</p>
           <h1>
-            Performance is a <span>network.</span>
+            I study the <span>structure behind performance.</span>
           </h1>
           <p>
-            I study how teams perform, adapt and succeed through data,
-            optimisation, storytelling and human connection.
+            I connect sports analytics, optimisation, research and storytelling
+            to understand how teams become more than the sum of their parts.
           </p>
           <div className="hero-btns">
             <a href="#thesis" className="btn btn-primary focus-ring">
               Explore thesis <ArrowRight aria-hidden="true" size={17} />
             </a>
-            <a href="mailto:alexdiazbarreiro@miami.edu?subject=Portfolio%20enquiry" className="btn btn-secondary focus-ring">
+            <a
+              href="mailto:alexdiazbarreiro@gmail.com?subject=Portfolio%20enquiry"
+              className="btn btn-secondary focus-ring"
+            >
               <Mail aria-hidden="true" size={17} /> Start a conversation
             </a>
           </div>
           <div className="hero-metrics" aria-label="Profile highlights">
             {heroMetrics.map((metric) => (
-              <div className="metric-card glass-panel" key={metric}>
+              <div className="metric-card surface-panel" key={metric}>
                 <span>{metric}</span>
               </div>
             ))}
@@ -142,9 +222,8 @@ export default function Home() {
         <section className="statement section-grid" id="philosophy">
           <div className="container statement-inner reveal">
             <p>
-              Success rarely belongs to isolated talent alone. It emerges from
-              the quality of relationships, the design of systems and the
-              ability of people to collaborate under pressure.
+              I keep returning to one idea: talent matters, but connection
+              determines what talent can become.
             </p>
           </div>
         </section>
@@ -152,23 +231,28 @@ export default function Home() {
         <section className="container split-story" id="about">
           <div className="section-heading reveal">
             <p className="eyebrow">About</p>
-            <h2>A systems thinker with a sports executive&apos;s lens.</h2>
+            <h2>I build my work around people, systems and the story between them.</h2>
           </div>
           <div className="story-grid">
             <article className="narrative-card reveal">
               <h3>The throughline</h3>
               <p>
-                My work sits at the intersection of sport, optimisation,
-                research, leadership and storytelling. I am drawn to moments
-                where talent alone is not enough, where the structure around
-                people determines what they are capable of becoming together.
+                I do not see analytics as a scoreboard after the fact. I see it
+                as a way to ask better questions while the story is still being
+                written. My work starts with sport, moves through systems and
+                ends with the people who have to make decisions under pressure.
               </p>
             </article>
-            <article className="identity-panel glass-panel reveal" aria-label="Identity summary">
-              <div className="identity-mark">ADB</div>
+            <article className="identity-panel surface-panel reveal" aria-label="Identity summary">
+              <img
+                className="headshot"
+                src="/assets/headshot.jpg"
+                alt="Alejandro Diaz Barreiro Aldana headshot"
+              />
+              <div className="identity-mark">ADBA</div>
               <p>
-                A personal brand built around analytical depth, emotional
-                intelligence and long-term ambition in elite sport.
+                I want the work to feel rigorous, but also human. Behind every
+                model sits a team, a coach, a leader and a decision.
               </p>
             </article>
           </div>
@@ -180,35 +264,62 @@ export default function Home() {
               <p className="eyebrow">Flagship Thesis</p>
               <h2>Formation of Teams in Sport Using Social Network Analysis</h2>
               <p>
-                A research experience built around one core question: what if
-                team success depends less on assembling the best individuals
-                and more on designing the right relationships between them?
+                The thesis asks a practical question with strategic weight:
+                what changes when we stop treating a team as a list of
+                individuals and start treating it as a network of relationships?
               </p>
+              <a
+                className="text-link focus-ring"
+                href="https://scholarship.miami.edu/esploro/outputs/991033074554102976"
+              >
+                Read the thesis <ArrowRight aria-hidden="true" size={16} />
+              </a>
             </div>
 
-            <div className="network-stage glass-panel reveal" aria-label="Abstract team network visualisation">
+            <div className="network-stage surface-panel reveal" aria-label="Dynamic team chemistry visualisation">
               <Network className="stage-icon" aria-hidden="true" size={22} />
+              <div className="network-pulse pulse-a" />
+              <div className="network-pulse pulse-b" />
               <div className="network-line line-a" />
               <div className="network-line line-b" />
               <div className="network-line line-c" />
-              <span className="node node-a">1</span>
-              <span className="node node-b">2</span>
-              <span className="node node-c">3</span>
-              <span className="node node-d">4</span>
-              <span className="node node-e">5</span>
+              <div className="network-line line-d" />
+              <span className="node node-a">Guard</span>
+              <span className="node node-b">Wing</span>
+              <span className="node node-c">Big</span>
+              <span className="node node-d">Connector</span>
+              <span className="node node-e">Sixth</span>
               <div className="network-caption">
                 <strong>Team chemistry as structure</strong>
-                <p>Relationships, robustness, proficiency and continuity.</p>
+                <p>
+                  The visual shows roles as connected decision points, not
+                  isolated players. Stronger links suggest continuity,
+                  familiarity and shared context.
+                </p>
               </div>
             </div>
           </div>
 
           <div className="container thesis-methods">
             {thesisMethods.map((method) => (
-              <article className="method-card glass-panel reveal" key={method}>
+              <article className="method-card surface-panel reveal" key={method}>
                 <span>{method}</span>
               </article>
             ))}
+          </div>
+
+          <div className="container tools-carousel-wrap">
+            <p className="eyebrow">Tools Used</p>
+            <div className="tools-carousel surface-panel" aria-label="Tools carousel">
+              <div className="tools-track">
+                {[...tools, ...tools].map((tool, index) => (
+                  <div className="tool-logo" key={`${tool.name}-${index}`}>
+                    <span>{tool.mark}</span>
+                    <small>{tool.name}</small>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -218,12 +329,9 @@ export default function Home() {
             <h2>Different fields, one question: how do systems perform?</h2>
           </div>
 
-          <div className="bento-grid research-grid">
+          <div className="research-grid-balanced">
             {researchAreas.map((area, index) => (
-              <article
-                className={`bento-item glass-panel reveal ${index === 0 ? "large" : ""}`}
-                key={area.title}
-              >
+              <article className="research-card surface-panel reveal" key={area.title}>
                 <span className="card-kicker">0{index + 1}</span>
                 <h3>{area.title}</h3>
                 <p>{area.copy}</p>
@@ -235,114 +343,129 @@ export default function Home() {
         <section className="container tool-section" id="visuals">
           <div className="section-heading reveal">
             <p className="eyebrow">Interactive Direction</p>
-            <h2>Visual tools that make invisible relationships legible.</h2>
+            <h2>Making the model understandable before making it impressive.</h2>
           </div>
-          <div className="tool-grid">
-            <article className="visual-panel glass-panel reveal">
+          <div className="explain-grid">
+            <article className="explain-panel surface-panel reveal">
               <BarChart3 className="stage-icon" aria-hidden="true" size={22} />
-              <h3>Research visualisation system</h3>
+              <h3>From question to decision</h3>
               <p>
-                Future modules can translate team networks, structural
-                constraints and robustness trade-offs into readable analytical
-                interfaces for professional review.
+                A reader should be able to follow the work without knowing the
+                mathematics. This section turns the thesis logic into a simple
+                sequence: define the team, map relationships, test line-ups and
+                compare trade-offs.
               </p>
-              <div className="chart-bars" aria-hidden="true">
-                <span />
-                <span />
-                <span />
-                <span />
-                <span />
+              <div className="explain-flow" aria-label="Visual explanation flow">
+                <span>Team</span>
+                <span>Network</span>
+                <span>Line-up</span>
+                <span>Trade-off</span>
               </div>
             </article>
             <aside className="tool-sidebar reveal" aria-label="Visualisation concepts">
-              <div className="glass-panel side-metric">
-                <strong>Network graphs</strong>
-                <p>Player interaction maps and team synergy structures.</p>
+              <div className="surface-panel side-metric">
+                <strong>1. Map the relationships</strong>
+                <p>Show who connects with whom and where familiarity already exists.</p>
               </div>
-              <div className="glass-panel side-metric">
-                <strong>Trade-off charts</strong>
-                <p>Robustness versus performance under constraints.</p>
+              <div className="surface-panel side-metric">
+                <strong>2. Test possible teams</strong>
+                <p>Compare line-ups under tactical, social and structural constraints.</p>
               </div>
-              <div className="glass-panel side-metric">
-                <strong>Line-up scenarios</strong>
-                <p>Optimisation demonstrations for strategic team formation.</p>
+              <div className="surface-panel side-metric">
+                <strong>3. Explain the trade-off</strong>
+                <p>Make performance and robustness visible enough to discuss.</p>
               </div>
             </aside>
           </div>
         </section>
 
-        <section className="container journey-section">
-          <div className="section-heading reveal">
+        <section className="container journey-section" id="journey">
+          <div className="journey-heading reveal">
             <p className="eyebrow">Journey</p>
-            <h2>A path from engineering to elite sport leadership.</h2>
+            <div className="journey-title-row">
+              <h2>A path from engineering to elite sport leadership.</h2>
+              <div className="school-logo-row" aria-label="Education links">
+                {schoolLinks.map((school) => (
+                  <a
+                    className="school-logo focus-ring"
+                    href={school.url}
+                    key={school.name}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={school.name}
+                  >
+                    <img src={school.logo} alt="" />
+                  </a>
+                ))}
+              </div>
+            </div>
+            <p>
+              Each step adds a layer: engineering discipline, research depth,
+              healthcare systems, sport analytics, communication and strategic
+              ambition.
+            </p>
           </div>
-          <div className="journey-line glass-panel reveal">
-            {journey.map((step, index) => (
-              <article className="journey-step" key={step}>
-                <span>{String(index + 1).padStart(2, "0")}</span>
-                <p>{step}</p>
+          <div className="timeline-panel surface-panel reveal">
+            {journey.map((step) => (
+              <article className="timeline-step" key={step.step}>
+                <span>{step.step}</span>
+                <h3>{step.title}</h3>
+                <p>{step.copy}</p>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="container" id="journal">
-          <div className="section-heading reveal">
-            <p className="eyebrow">Journal</p>
-            <h2>Writing as a way to think in public.</h2>
-          </div>
-          <div className="journal-grid">
-            <article className="glass-panel journal-card reveal">
-              <span>Reflection</span>
-              <h3>What sport teaches us about systems.</h3>
-              <p>
-                A space for essays on leadership, team dynamics, decision-making
-                and the hidden architecture of performance.
-              </p>
-            </article>
-            <article className="glass-panel journal-card reveal">
-              <span>Observation</span>
-              <h3>The human side of analytics.</h3>
-              <p>
-                Technical work becomes more valuable when it can be understood,
-                communicated and acted upon by people.
-              </p>
-            </article>
           </div>
         </section>
 
         <section className="container recognition-section">
           <div className="section-heading reveal">
             <p className="eyebrow">Recognition & Momentum</p>
-            <h2>Signals of credibility without losing the human story.</h2>
+            <h2>Moments that will become a visual archive.</h2>
           </div>
-          <div className="recognition-list glass-panel reveal">
-            {recognition.map((item) => (
-              <span key={item}>{item}</span>
+          <div className="accolades-grid reveal">
+            {accolades.map((item) => (
+              <a
+                className="accolade-card surface-panel focus-ring"
+                href={item.href}
+                key={item.title}
+                target="_blank"
+                rel="noreferrer"
+              >
+                <span>{item.label}</span>
+                <h3>{item.title}</h3>
+                <p>{item.copy}</p>
+                <strong>
+                  Open link <ArrowRight aria-hidden="true" size={15} />
+                </strong>
+              </a>
             ))}
+          </div>
+          <div className="photo-carousel surface-panel reveal" aria-label="Recognition photo placeholders">
+            <div className="photo-track">
+              {[...recognition, ...recognition].map((item, index) => (
+                <figure className="photo-placeholder" key={`${item}-${index}`}>
+                  <div />
+                  <figcaption>{item}</figcaption>
+                </figure>
+              ))}
+            </div>
           </div>
         </section>
 
         <section className="container current-section">
-          <div className="current-grid">
-            <article className="glass-panel current-card reveal">
-              <p className="eyebrow">Currently Exploring</p>
-              <h2>How research can become strategic advantage in sport.</h2>
-              <div className="skill-cloud">
-                {focusAreas.map((area) => (
-                  <span key={area}>{area}</span>
-                ))}
-              </div>
-            </article>
-            <article className="glass-panel current-card reveal">
-              <p className="eyebrow">Beyond Work</p>
-              <h2>Sport, creativity, culture and the stories that shape us.</h2>
-              <div className="skill-cloud">
-                {inspirations.map((item) => (
-                  <span key={item}>{item}</span>
-                ))}
-              </div>
-            </article>
+          <div className="story-unfold">
+            {storyCards.map((card, index) => (
+              <article className="story-card surface-panel reveal" key={card.label}>
+                <span>0{index + 1}</span>
+                <p className="eyebrow">{card.label}</p>
+                <h2>{card.title}</h2>
+                <p>{card.copy}</p>
+                <div className="story-beats" aria-label={`${card.label} story beats`}>
+                  {card.beats.map((beat) => (
+                    <span key={beat}>{beat}</span>
+                  ))}
+                </div>
+              </article>
+            ))}
           </div>
         </section>
       </main>
@@ -353,18 +476,24 @@ export default function Home() {
             <p className="eyebrow">Contact</p>
             <h2>For research, strategy, analytics or sport leadership conversations.</h2>
             <div className="contact-details">
-              <a className="focus-ring" href="mailto:alexdiazbarreiro@miami.edu">
-                <Mail aria-hidden="true" size={16} /> alexdiazbarreiro@miami.edu
+              <a className="focus-ring" href="mailto:alexdiazbarreiro@gmail.com">
+                <Mail aria-hidden="true" size={16} /> alexdiazbarreiro@gmail.com
               </a>
-              <a className="focus-ring" href="mailto:alexdiazbarreiro@miami.edu?subject=CV%20request">
+              <a
+                className="focus-ring"
+                href="https://www.linkedin.com/in/alejandro-diaz-barreiro/"
+              >
+                <Linkedin aria-hidden="true" size={16} /> LinkedIn
+              </a>
+              <a className="focus-ring" href="mailto:alexdiazbarreiro@gmail.com?subject=CV%20request">
                 <FileText aria-hidden="true" size={16} /> Request CV
               </a>
             </div>
           </div>
 
           <form
-            className="contact-form glass-panel"
-            action="mailto:alexdiazbarreiro@miami.edu"
+            className="contact-form surface-panel"
+            action="mailto:alexdiazbarreiro@gmail.com"
             method="post"
             encType="text/plain"
           >
